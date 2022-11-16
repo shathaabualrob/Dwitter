@@ -1,0 +1,12 @@
+<div class="block">
+    <ul>
+        {% for following in profile.follows.all %}
+            <li>{{ following }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'dwitter:profile_list' %}">
+        <button class="button is-dark is-outlined is-fullwidth">
+            All Profiles
+        </button>
+    </a>
+</div>
